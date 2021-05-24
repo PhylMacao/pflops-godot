@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Panel.gd" type="Script" id=1]
+[ext_resource path="res://fonts/NotoSans-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="Panel" type="Panel"]
+margin_right = 1022.0
+margin_bottom = 602.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 430.0
+margin_top = 298.0
+margin_right = 549.0
+margin_bottom = 358.0
+text = "Don't press."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 393.0
+margin_top = 235.0
+margin_right = 577.0
+margin_bottom = 285.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
